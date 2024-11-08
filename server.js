@@ -3,19 +3,21 @@ const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');  // CORS modülünü dahil et
 
 const app = express();
 const PORT = 3000;
 const SECRET_KEY = "superSecretKey123";  // Güçlü bir anahtar belirleyin
 
+app.use(cors());  // Tüm domainlere izin verir
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Admin paneline giriş için doğrulama
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-    
-    if (username === "admin" && password === "myPassword123") {  // Kullanıcı adı ve şifreyi ayarlayın
+
+    if (username === "admin" && password === "myPassword123") {
         const token = jwt.sign({}, SECRET_KEY, { expiresIn: '1h' });
         res.json({ token });
     } else {
@@ -56,6 +58,10 @@ app.post('/admin/add-post', authenticateToken, (req, res) => {
             res.send("Post başarıyla eklendi.");
         });
     });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server ${PORT} portunda çalışıyor.`);
 });
 
 app.get('/', (req, res) => {
