@@ -1,4 +1,4 @@
-// Postları sunucudan al ve göster
+// Fetch posts from the server and display them on the "Postlarım" page
 fetch('/posts')
     .then(response => response.json())
     .then(posts => {
@@ -6,6 +6,7 @@ fetch('/posts')
         
         posts.forEach(post => {
             const postElement = document.createElement('div');
+            postElement.classList.add('post-card');
             postElement.innerHTML = `
                 <h3>${post.title}</h3>
                 <p>${post.content.slice(0, 100)}...</p>
