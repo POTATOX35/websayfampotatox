@@ -6,10 +6,10 @@ const path = require('path');
 const cors = require('cors');  // CORS modülünü dahil et
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const SECRET_KEY = "superSecretKey123";  // Güçlü bir anahtar belirleyin
 
-app.use(cors());  // Tüm domainlere izin verir
+app.use(cors());  // CORS'u tüm domainlere açık hale getiriyoruz
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -52,17 +52,13 @@ app.post('/admin/add-post', authenticateToken, (req, res) => {
     fs.readFile('posts.json', 'utf8', (err, data) => {
         let posts = data ? JSON.parse(data) : [];
         posts.push(post);
-
-        fs.writeFile('posts.json', JSON.stringify(posts, null, 2), (err) => {
+        fs.writeFile('posts.json', JSON.stringify(posts), (err) => {
             if (err) return res.status(500).send("Post kaydedilemedi.");
             res.send("Post başarıyla eklendi.");
         });
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server ${PORT} portunda çalışıyor.`);
-});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'postlarim.html'));
