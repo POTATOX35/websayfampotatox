@@ -3,11 +3,17 @@ const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');  // CORS modülünü içe aktar
 
 const app = express();
 const PORT = 3000;
 const SECRET_KEY = "superSecretKey123";  // Güçlü bir anahtar belirleyin
 
+app.use(cors({
+    origin: '*',  // Geliştirme ortamında her yerden gelen istekleri kabul edebiliriz
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -56,6 +62,9 @@ app.post('/admin/add-post', authenticateToken, (req, res) => {
             res.send("Post başarıyla eklendi.");
         });
     });
+});
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'postlarim.html'));
 });
 
 app.get('/', (req, res) => {
