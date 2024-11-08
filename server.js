@@ -58,6 +58,11 @@ app.post('/admin/add-post', authenticateToken, (req, res) => {
     });
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'postlarim.html'));
+});
+
+
 app.listen(PORT, () => {
     console.log(`Server ${PORT} portunda çalışıyor.`);
 });
