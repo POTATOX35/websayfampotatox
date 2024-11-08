@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Detay</title>
+</head>
+<body>
+    <h1 id="postTitle"></h1>
+    <p id="postContent"></p>
+
+    <script>
+        const post = JSON.parse(localStorage.getItem('selectedPost'));
+        document.getElementById('postTitle').textContent = post.title;
+        document.getElementById('postContent').textContent = post.content;
+    </script>
+</body>
+</html>
