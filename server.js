@@ -3,20 +3,20 @@ const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const path = require('path');
-const cors = require('cors');  // CORS modülünü dahil et
+const cors = require('cors');  // CORS modülünü içe aktar
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 const SECRET_KEY = "superSecretKey123";  // Güçlü bir anahtar belirleyin
 
-// CORS yapılandırması
+// CORS ayarları
 const corsOptions = {
-    origin: 'https://websayfampotatox.onrender.com', // İzin verilen domain
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: 'https://websayfampotatox.onrender.com',  // Admin panelinin domaini
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],  // İzin verilen başlıklar
 };
 
-// CORS'u belirli domain için aktif hale getiriyoruz
+// CORS middleware ekleyin
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Admin paneline giriş için doğrulama
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-
-    if (username === "admin" && password === "myPassword123") {
+    
+    if (username === "admin" && password === "myPassword123") {  // Kullanıcı adı ve şifreyi ayarlayın
         const token = jwt.sign({}, SECRET_KEY, { expiresIn: '1h' });
         res.json({ token });
     } else {
@@ -61,7 +61,8 @@ app.post('/admin/add-post', authenticateToken, (req, res) => {
     fs.readFile('posts.json', 'utf8', (err, data) => {
         let posts = data ? JSON.parse(data) : [];
         posts.push(post);
-        fs.writeFile('posts.json', JSON.stringify(posts), (err) => {
+
+        fs.writeFile('posts.json', JSON.stringify(posts, null, 2), (err) => {
             if (err) return res.status(500).send("Post kaydedilemedi.");
             res.send("Post başarıyla eklendi.");
         });
@@ -69,12 +70,5 @@ app.post('/admin/add-post', authenticateToken, (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server ${PORT} portunda çalışıyor`);
+    console.log(`Server ${PORT} portunda çalışıyor.`);
 });
-
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'postlarim.html'));
-});
-
-
