@@ -9,7 +9,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const SECRET_KEY = "superSecretKey123";  // Güçlü bir anahtar belirleyin
 
-app.use(cors());  // CORS'u tüm domainlere açık hale getiriyoruz
+// CORS yapılandırması
+const corsOptions = {
+    origin: 'https://websayfampotatox.onrender.com', // İzin verilen domain
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+// CORS'u belirli domain için aktif hale getiriyoruz
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -59,12 +68,13 @@ app.post('/admin/add-post', authenticateToken, (req, res) => {
     });
 });
 
+app.listen(PORT, () => {
+    console.log(`Server ${PORT} portunda çalışıyor`);
+});
+
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'postlarim.html'));
 });
 
 
-app.listen(PORT, () => {
-    console.log(`Server ${PORT} portunda çalışıyor.`);
-});
