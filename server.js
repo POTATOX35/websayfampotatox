@@ -9,16 +9,11 @@ const app = express();
 const PORT = 3000;
 const SECRET_KEY = "superSecretKey123";  // Güçlü bir anahtar belirleyin
 
-// CORS ayarları
-const corsOptions = {
-  origin: 'https://websayfampotatox.onrender.com',  // Admin panelinin domaini
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization'],  // İzin verilen başlıklar
-};
-
-// CORS middleware ekleyin
-app.use(cors(corsOptions));
-
+app.use(cors({
+    origin: '*',  // Geliştirme ortamında her yerden gelen istekleri kabul edebiliriz
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
