@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+         .sabit-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* Şeffaf beyaz arka plan */
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px); /* Cam efekti */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+            z-index: 1000; /* Diğer içeriklerin üstünde durması için */
+        }
+        
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP9BQXRwvkK8yPHxkUxd6-w580CLHVogEoGw&s'); /* Resim linki buraya */
+            background-size: cover; /* Tam ekran kaplama */
+            background-position: center; /* Merkeze yerleştirme */
+            background-repeat: no-repeat; /* Tekrarlamayı kapatma */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.1); /* Şeffaf beyaz */
+    backdrop-filter: blur(10px); /* Bulanıklık efekti */
+    -webkit-backdrop-filter: blur(10px); /* Safari desteği */
+    border-radius: 15px; /* Yuvarlak köşeler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Şeffaf kenarlık */
+    padding: 20px;
+            
+}
+
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            text-align: center;
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Admin Panel Section -->
+<div id="login-container" class="container">
+    <h1>Admin Panel</h1>
+    <label for="username">Kullanıcı Adı</label>
+    <input type="text" id="username" placeholder="Kullanıcı adınızı girin">
+    
+    <label for="password">Şifre</label>
+    <input type="password" id="password" placeholder="Şifrenizi girin">
+    
+    <button onclick="login()">Giriş Yap</button>
+
+    <div class="message" id="message"></div>
+</div>
+
+<!-- Add Post Section -->
+<div id="post-container" class="container" style="display: none;">
+    <h1>Yeni Post Ekle</h1>
+    <label for="title">Başlık</label>
+    <input type="text" id="title" placeholder="Post başlığını girin">
+    
+    <label for="content">İçerik</label>
+    <textarea id="content" placeholder="Post içeriğini girin" rows="4"></textarea>
+    
+    <button onclick="addPost()">Postu Ekle</button>
+
+    <div class="message" id="post-message"></div>
+</div>
+
+<script>
+    // Giriş yapma işlemi
+    const login = async () => {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+
+        const response = await fetch('http://potatoxyazilar.glitch.me/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            localStorage.setItem('token', data.token);  // Token'ı localStorage'a kaydet
+            message.textContent = "Başarıyla giriş yapıldı!";
+            message.style.color = 'green';
+            setTimeout(() => {
+                // Giriş yaptıktan sonra post ekleme ekranını göster
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('post-container').style.display = 'block';
+            }, 1000);
+        } else {
+            message.textContent = "Yanlış kullanıcı adı veya şifre!";
+            message.style.color = 'red';
+        }
+    };
+
+    // Post ekleme işlemi
+    const addPost = async () => {
+        const title = document.getElementById("title").value;
+        const content = document.getElementById("content").value;
+        const message = document.getElementById("post-message");
+
+        const token = localStorage.getItem('token');
+        
+        if (!token) {
+            message.textContent = "Lütfen giriş yapın!";
+            message.style.color = 'red';
+            return;
+        }
+
+        const response = await fetch('http://potatoxyazilar.glitch.me/admin/add-post', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token  // Token'ı gönderiyoruz
+            },
+            body: JSON.stringify({ title, content })
+        });
+
+        if (response.ok) {
+            message.textContent = "Post başarıyla eklendi!";
+            message.style.color = 'green';
+        } else {
+            message.textContent = "Bir hata oluştu!";
+            message.style.color = 'red';
+        }
+    };
+</script>
+
+</body>
+</html>

@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Detay</title>
-    <style>
+     <style> 
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
+            background-color: #026b8b;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2300141d' fill-opacity='0.51'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
         }
-
         h1 {
             text-align: center;
             margin-top: 20px;
         }
-
         .post-content {
             background-color: white;
             padding: 20px;
@@ -27,24 +26,75 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .post-content p {
             font-size: 16px;
             line-height: 1.6;
             color: #333;
         }
+        .sabit-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(25, 25, 25, 0.7);
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        main {
+            padding: 5px;
+            transition: margin-top 0.3s;
+        }
     </style>
 </head>
 <body>
-    <div class="post-content">
-        <h1 id="postTitle"></h1>
-        <p id="postContent"></p>
-    </div>
+    <header>
+        <div class="sabit-bar">
+            <h1 id="postTitle">Yazılarım</h1>
+        </div>
+    </header>
+    <main>
+        <div id="postlist">
+            <div class="post-content">
+                <p id="postContent">İçerik buraya gelecek...</p>
+            </div>
+        </div>
+  </main>
 
-    <script>
-        const post = JSON.parse(localStorage.getItem('selectedPost'));
-        document.getElementById('postTitle').textContent = post.title;
-        document.getElementById('postContent').textContent = post.content;
-    </script>
+  
+
+    
+  <script>
+    window.onload = function() {
+    // URL'den ID'yi almak için location.pathname kullanabiliriz
+    const path = window.location.pathname; 
+    const id = path.split('/').pop();  // /postdetay/id şeklinde URL, son kısımdan id'yi alıyoruz
+    
+    // Sonrasında ID'yi kullanarak serverdan veri çekebiliriz
+    fetch(`/getPost/${id}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('postTitle').textContent = data.title;
+            document.getElementById('postContent').textContent = data.content;
+        })
+        .catch(error => console.error('Error:', error));
+}
+     function adjustMainMargin() {
+            const headerHeight = document.querySelector('.sabit-bar').offsetHeight;
+            document.querySelector('main').style.marginTop = `${headerHeight}px`;
+        }
+
+        // Sayfa yüklenince başlat
+        window.addEventListener('load', adjustMainMargin);
+        // Pencere yeniden boyutlandığında güncelle
+        window.addEventListener('resize', adjustMainMargin);
+</script>
+
+
+
+
 </body>
 </html>
