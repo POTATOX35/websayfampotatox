@@ -3,63 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>Post Detay</title>
-     <style> 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #026b8b;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%2300141d' fill-opacity='0.51'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
-        }
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .post-content {
-            background-color: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .post-content p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-        }
-        .sabit-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(25, 25, 25, 0.7);
-            color: #FFFFFF;
-            padding: 10px;
-            text-align: center;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-        main {
-            padding: 5px;
-            transition: margin-top 0.3s;
-        }
-    </style>
+    <link rel="stylesheet" href="	https://potatoxyazilar.glitch.me/style.css">
 </head>
 <body>
     <header>
         <div class="sabit-bar">
-            <h1 id="postTitle">Yazılarım</h1>
+            <h1 id="postTitle">Başlık</h1>
         </div>
     </header>
     <main>
         <div id="postlist">
             <div class="post-content">
-                <p id="postContent">İçerik buraya gelecek...</p>
+                <p id="postContent"></p>
             </div>
         </div>
   </main>
@@ -77,20 +36,28 @@
     fetch(`/getPost/${id}`)
         .then(response => response.json())
         .then(data => {
+            let cleanContent = data.content.replace(/\n/g, '<br>').replace(/'/g, '"');
             document.getElementById('postTitle').textContent = data.title;
-            document.getElementById('postContent').textContent = data.content;
+            document.getElementById('postContent').innerHTML = cleanContent;
+            document.title = data.title;
+
         })
         .catch(error => console.error('Error:', error));
 }
-     function adjustMainMargin() {
-            const headerHeight = document.querySelector('.sabit-bar').offsetHeight;
-            document.querySelector('main').style.marginTop = `${headerHeight}px`;
-        }
+   function adjustMainMargin() {
+    const headerHeight = document.querySelector('.sabit-bar').offsetHeight;
+    const mainElement = document.querySelector('main');
+    console.log("Header Height:", headerHeight);  // Konsola header yüksekliğini yazdırıyoruz
+    console.log("Main Element:", mainElement);  // Konsola main elementini yazdırıyoruz
+    mainElement.style.marginTop = `${headerHeight}px`;
+}
 
-        // Sayfa yüklenince başlat
-        window.addEventListener('load', adjustMainMargin);
-        // Pencere yeniden boyutlandığında güncelle
-        window.addEventListener('resize', adjustMainMargin);
+// Sayfa yüklenince başlat
+window.addEventListener('load', adjustMainMargin);
+
+// Pencere yeniden boyutlandığında güncelle
+window.addEventListener('resize', adjustMainMargin);
+
 </script>
 
 

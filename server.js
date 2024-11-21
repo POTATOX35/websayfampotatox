@@ -10,6 +10,8 @@ const app = express();
 const PORT = 3000;
 const SECRET_KEY = "superSecretKey123";  // Güçlü bir anahtar belirleyin
 
+
+
 app.use(cors({
     origin: '*',  // Geliştirme ortamında her yerden gelen istekleri kabul edebiliriz
     methods: ['GET', 'POST', 'OPTIONS'],
@@ -22,7 +24,7 @@ app.post('/login', (req, res) => {
     
     const { username, password } = req.body;
     
-    if (username === "P0TATOX35" && password === "P0TATOX3Sa.") {  // Kullanıcı adı ve şifreyi ayarlayın
+    if ((username === "Potatox35" && password === "P0TATOX3Sa.")||(username === "AAB" && password === "AAB59.panel")||(username == 'andropanda' && password == 'andropanda')) {  // Kullanıcı adı ve şifreyi ayarlayın
         const token = jwt.sign({}, SECRET_KEY, { expiresIn: '1h' });
         res.json({ token });
     } else {
@@ -94,7 +96,7 @@ app.get('/post/:id', (req, res) => {
         if (post) {
             res.sendFile(path.join(__dirname, 'public', 'postDetay.html'));  // HTML dosyasını gönder
         } else {
-            res.status(404).send("Post bulunamadı.");
+            res.status(404).sendFile(path.join(__dirname,'public', '404.html'));  // 404 hata sayfasına yönlendir
         }
     });
 });
@@ -107,7 +109,7 @@ app.get('/getPost/:id', (req, res) => {
         if (post) {
             res.send(JSON.stringify(post));  // HTML dosyasını gönder
         } else {
-            res.status(404).send("Post bulunamadı.");
+            res.status(404).sendFile(path.join(__dirname,'public', '404.html'));  // 404 hata sayfasına yönlendir
         }
     });
     });
