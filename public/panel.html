@@ -127,7 +127,7 @@ button:hover {
         const password = document.getElementById("password").value;
         const message = document.getElementById("message");
 
-        const response = await fetch('http://potatoxyazilar.glitch.me/login', {
+        const response = await fetch('/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
@@ -173,7 +173,7 @@ button:hover {
         if (userad == 'andropanda'){
           profileimage = "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/IMG_20241115_020251_169.jpg?v=1731625384404";
         }
-        const response = await fetch('http://potatoxyazilar.glitch.me/admin/add-post', {
+        const response = await fetch('/admin/add-post', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

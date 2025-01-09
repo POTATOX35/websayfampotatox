@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Potatox Yazılar">
+    <meta property="og:description" content="Yazılarımı bu sayfada paylaşıyorum, seni de bu sayfaya beklerim !!!">
+    <meta property="og:image" content="https://i.pinimg.com/736x/9e/99/85/9e9985235287536818a4a152f75192d1.jpg">
+    <meta property="og:url" content="https://potatoxyazilar.glitch.me">
+    <meta property="og:type" content="article">  
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Schoolbell&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <title>Post Detay</title>
     <link rel="stylesheet" href="	https://potatoxyazilar.glitch.me/style.css">
 </head>
@@ -21,18 +26,32 @@
                 <p id="postContent"></p>
             </div>
         </div>
+      <div class="comment-section">
+            <div class="comment-input-container">
+                <input type="text" id="username" placeholder="Kullanıcı Adı" class="comment-input">
+                <textarea id="comment" placeholder="Yorumunuzu yazın..." class="comment-inputt"></textarea>
+            </div>
+            <button id="submit-comment" class="submit-comment-btn">Yorum Gönder</button>
+        </div>
+
+        <!-- Yorumlar Bölümü -->
+        <div id="comments-list" class="comments-list">
+            <div class="comment">
+                
+            </div>
+        </div>
   </main>
 
   
 
     
   <script>
-    window.onload = function() {
-    // URL'den ID'yi almak için location.pathname kullanabiliriz
-    const path = window.location.pathname; 
+  // Sayfa yüklendiğinde
+  window.onload = function() {
+    const path = window.location.pathname;
     const id = path.split('/').pop();  // /postdetay/id şeklinde URL, son kısımdan id'yi alıyoruz
     
-    // Sonrasında ID'yi kullanarak serverdan veri çekebiliriz
+    // Post verilerini al
     fetch(`/getPost/${id}`)
         .then(response => response.json())
         .then(data => {
@@ -40,16 +59,92 @@
             document.getElementById('postTitle').textContent = data.title;
             document.getElementById('postContent').innerHTML = cleanContent;
             document.title = data.title;
-
+      
+            const metaTag = document.querySelector('meta[property="og:title"]');
+            if (metaTag) {
+                metaTag.setAttribute("content", data.title);
+            }
         })
         .catch(error => console.error('Error:', error));
-}
-   function adjustMainMargin() {
+  }
+
+  // Yorum eklemek için API çağrısı
+  const addComment = async (postId, username, content) => {
+    const response = await fetch(`/add-comment/${postId}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: username,
+            content: content
+        })
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+        console.log('Yorum başarıyla eklendi:', result);
+        loadComments(postId);  // Yorumlar güncellenince yeniden yükle
+    } else {
+        console.log('Yorum eklenemedi:', result);
+    }
+  };
+
+  // Yorumları listelemek
+  const loadComments = (postId) => {
+    fetch(`/getPost/${postId}`)
+        .then(response => response.json())
+        .then(data => {
+            const commentsList = document.getElementById('comments-list');
+            commentsList.innerHTML = '';  // Mevcut yorumları temizle
+
+            // Yorumları tarih (date) değerine göre azalan sırada sıralıyoruz
+            const sortedComments = data.comments.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            sortedComments.forEach(comment => {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+                commentElement.innerHTML = `
+                    <p class="comment-username">${comment.username}</p>
+                    <p class="comment-content">${comment.content}</p>
+                    <div class="post-date">${new Date(comment.date).toLocaleDateString('tr-TR')}</div>
+                    
+                    
+                `;
+                commentsList.appendChild(commentElement);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+};
+
+
+  // Yorum gönderme butonuna tıklama
+  document.getElementById('submit-comment').addEventListener('click', () => {
+    const username = document.getElementById('username').value;
+    const content = document.getElementById('comment').value;
+    const postId = window.location.pathname.split('/').pop();  // URL'den postId al
+
+    // Yorum gönderme işlemi
+    if (username && content) {
+        addComment(postId, username, content);
+        document.getElementById('username').value = '';  // Inputları temizle
+        document.getElementById('comment').value = '';   // Inputları temizle
+    } else {
+        alert('Kullanıcı adı ve yorum içeriği gereklidir.');
+    }
+  });
+
+  // Sayfa yüklendiğinde yorumları yükle
+  window.addEventListener('load', () => {
+    const postId = window.location.pathname.split('/').pop();
+    loadComments(postId);  // İlk başta yorumları yükle
+  });
+    function adjustMainMargin() {
     const headerHeight = document.querySelector('.sabit-bar').offsetHeight;
     const mainElement = document.querySelector('main');
     console.log("Header Height:", headerHeight);  // Konsola header yüksekliğini yazdırıyoruz
     console.log("Main Element:", mainElement);  // Konsola main elementini yazdırıyoruz
-    mainElement.style.marginTop = `${headerHeight}px`;
+    mainElement.style.marginTop = `${headerHeight}px`;  // marginTop değerini dinamik olarak ayarlıyoruz
 }
 
 // Sayfa yüklenince başlat
@@ -58,8 +153,8 @@ window.addEventListener('load', adjustMainMargin);
 // Pencere yeniden boyutlandığında güncelle
 window.addEventListener('resize', adjustMainMargin);
 
+    
 </script>
-
 
 
 

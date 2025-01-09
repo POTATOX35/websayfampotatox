@@ -118,21 +118,64 @@
             padding: 20px;
             
         }
+.post-card {
+    position: relative; /* Ögelerin doğru hizalanabilmesi için */
+    background: linear-gradient(135deg, rgba(0, 217, 171, 0.48) 0%, rgba(255, 255, 255, 0) 100%);
+    background-position: top left;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s ease;
+}
 
-        .post-card {
-            background: linear-gradient(135deg, rgba(0, 217, 171, 0.48) 0%, rgba(255, 255, 255, 0) 100%);
-    background-position-x: 0%;
-    background-position-y: 0%;
-  background-position: top left;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.5s ease;
-        }
+.post-card p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFf;
+    font-size: 16px;
+    margin: 10px 0;
+    padding-bottom: 35px; /* Burada padding-bottom ile altına boşluk ekleyebilirsiniz */
+}
+
+.post-card .post-user,
+.post-card .post-date {
+    position: absolute;
+    right: 15px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    color: #FFFFFF;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.post-card .post-date {
+    bottom: 15px;
+    font-size: 15px;
+  text-align:right;
+}
+
+.post-card .post-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    bottom: 52px;
+    font-size: 15px;
+}
+
+.profile-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+        
         .post-content {
                     background-color: black;
                     background: linear-gradient(135deg, rgba(0, 217, 171, 0.48) 0%, rgba(255, 255, 255, 0) 100%);
@@ -184,14 +227,7 @@
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Hafif parlama */
         }
 
-        .post-card p {
-            font-family: "IBM Plex Mono", monospace;
-            font-weight: 400;
-            font-style: normal;
-            color: #FFFFFf;
-            font-size: 16px;
-            margin: 10px 0;
-        }
+        
 
         button {
             font-family: "Silkscreen", sans-serif;
@@ -205,6 +241,8 @@
             color: white;
             cursor: pointer;
             transition: box-shadow 0.3s ease-in-out;
+          position: initial;
+  bottom: 15px;
         }
 
         button:hover {
@@ -214,31 +252,7 @@
                         0 0 30px rgba(0, 255, 255, 0.3); /* Yoğun parlama */
         }
 
-        .post-date {
-            font-family: "IBM Plex Mono", monospace;
-            font-weight: 500;
-            font-style: normal;
-            position: absolute;
-            bottom: 15px;
-            right:15px;
-            font-size:15px;
-            color:#FFFFFF;
-            transition: text-shadow 0.3s ease-in-out;
-        }
-.post-user {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FFFFFF;
-    position: absolute;
-    bottom: 35px;
-    right: 15px;
-    transition: text-shadow 0.3s ease-in-out;
-}
-
+        
 #UserNameSpann {
   background: linear-gradient(to left, rgba(0, 0, 0, 0) 2%, rgb(255, 255, 255) 10%);
       -webkit-background-clip: text;
@@ -256,14 +270,7 @@
         font-size: 15px;
 }
 
-.profile-image {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.6); /* Beyaz bir kenarlık */
-   cursor: pointer;
-}
+
         .post-card:hover .post-date {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hafif parlama */
         }
@@ -278,7 +285,9 @@
             text-align: center;
             grid-column: span 3;
         }
- main {
+ 
+
+main {
             padding: 5px;
             transition: margin-top 0.3s;
         }
@@ -296,4 +305,132 @@
   transition: opacity 0.3s ease;
   pointer-events: none;
   z-index: 10000;
+}
+.today-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    position: absolute;
+    top: -3px; /* Kutunun dışına taşırmak için yukarı */
+    right: -15px; /* Kutunun dışına taşırmak için sağa */
+    font-size: 16px;/* Yazı boyutu */
+    color: #FFFFFF; /* Yazı rengi */
+    background-color: rgba(0, 0, 0, 0.8); /* Siyah arka plan */
+    padding: 5px 15px; /* Etiketin içine boşluk */
+    border-radius: 5px; /* Hafif yuvarlatılmış kenarlar */
+    text-transform: uppercase; /* Büyük harf */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    transform: rotate(25deg); /* Sağ üst köşeye yatık açı */
+    transform-origin: center; /* Dönüşüm merkezi ayarı */
+    z-index: 10; /* Üstte görünmesini sağlamak için */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efekti */
+}
+
+.today-label:hover {
+    background-color: #009680; /* Hover durumunda arka plan rengi */
+    color: #FFFFFF; /* Hover durumunda yazı rengi */
+}
+.video-container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+.comment-section {
+    margin-top: 30px;
+    background: linear-gradient(135deg, rgba(0, 217, 171, 0.48) 0%, rgba(255, 255, 255, 0) 100%);
+    background-position-x: 0%;
+    background-position-y: 0%;
+  background-position: top left;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comment-input {
+    padding: 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 16px;
+  color: #333;
+}
+
+
+.comment-input::placeholder {
+    color: #aaa;
+}
+.comment-inputt {
+    padding: 15px; /* İçeriği daha geniş yapmak için padding'i artırdım */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 16px;
+    color: #333;
+    min-height: 100px; /* Yüksekliği artırdım */
+}
+
+
+.comment-inputt::placeholder {
+    color: #aaa;
+}
+
+.submit-comment-btn {
+    padding: 10px 20px;
+  background-color: #028BBA;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.submit-comment-btn:hover {
+    background-color: #026b8b;
+}
+
+.comments-list {
+    margin-top: 20px;
+}
+
+.comment {
+    margin-top: 30px;
+    background: linear-gradient(135deg, rgba(0, 217, 171, 0.48) 0%, rgba(255, 255, 255, 0) 100%);
+    background-position-x: 0%;
+    background-position-y: 0%;
+  background-position: top left;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  color:#FFFFFF;
+}
+
+.comment-username {
+    font-weight: bold;
+    margin-bottom: 5px;
+  margin-top: auto;
+}
+
+.comment-content {
+    margin: 0;
+  font-weight: normal;
 }

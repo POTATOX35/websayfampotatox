@@ -1,51 +1,18 @@
 [
   {
-    "title": "djsjjs",
-    "content": "dusjsjskkska",
-    "id": "0733d7e1-0b02-4963-aab7-4a34d312ba2d",
-    "date": "2024-11-09T10:53:58.895Z",
-    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
-  },
-  {
-    "title": "djsjjssgshahahhs",
-    "content": "dusjsjskkskahshshshshshs",
-    "id": "186d904f-d205-4762-9f31-f1113f9901c7",
-    "date": "2024-11-09T10:54:29.764Z",
-    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
-  },
-  {
-    "title": "1",
-    "content": "1",
-    "id": "9ffd4458-b857-4223-8328-5335d21c5c4c",
-    "date": "2024-11-09T12:28:27.246Z",
-    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
-  },
-  {
-    "title": "2",
-    "content": "2",
-    "id": "77ea87f4-44ad-4b00-8351-ad561730cb4f",
-    "date": "2024-11-09T12:28:33.781Z",
-    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
-  },
-  {
-    "title": "3",
-    "content": "3",
-    "id": "3e94a4af-d919-4c44-8c14-913e7a79dce6",
-    "date": "2024-11-09T12:28:38.782Z",
-    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
-  },
-  {
     "title": "MrOnlyKemal, bu senin için ",
     "content": "bak bu senin için ",
     "id": "3d05e009-83eb-4704-b97c-645eb533ebba",
     "date": "2024-11-09T13:03:24.586Z",
     "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
+    "userad": "Potatox35",
+    "comments": [
+      {
+        "username": "SSSSS",
+        "content": "😍😍👏💋🤔😍👏💋🤔💖👏😍🤔💋😘🌹❤🌹😜😜😜😜😜💖👏😍🤔💋🤞😜🌹😘😍👏💖",
+        "date": "2024-11-28T05:30:08.866Z"
+      }
+    ]
   },
   {
     "title": "Bu bir deneme postu DEĞİLDİR ",
@@ -64,14 +31,6 @@
     "userad": "Potatox35"
   },
   {
-    "title": "Deneme",
-    "content": "Deneme",
-    "id": "0ab855bb-b369-4a22-a1ec-95abcf533fbd",
-    "date": "2024-11-09T14:24:22.091Z",
-    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
-  },
-  {
     "title": "Bakalım şimdi olcak mııııı ",
     "content": "LAY LAY LAY LAYY ERGÜN PLAK LAY LAY LAY LAY ERGÜN PLAK \nLAY LAY LAY LAY ERGÜN PLAK LAY LAY LAY LAY ERGÜN PLAK \nLAY LAY LAY LAY ERGÜN PLAK LAY LAY LAY LAY ERGÜN PLAK \n",
     "id": "70c7c81c-0c96-4491-be89-a992c174e3ff",
@@ -85,7 +44,14 @@
     "id": "617c167c-2f6c-4739-982f-20e9c5cb66f1",
     "date": "2024-11-11T10:30:00.595Z",
     "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "userad": "Potatox35"
+    "userad": "Potatox35",
+    "comments": [
+      {
+        "username": "Bu yorumu kimse görmesin ",
+        "content": "Görmicek zaten aq",
+        "date": "2024-11-23T20:16:43.621Z"
+      }
+    ]
   },
   {
     "title": "Potatox35 Sen Bittin Olm",
@@ -117,7 +83,14 @@
     "userad": "Potatox35FanHesapYKS2026Tayfa",
     "id": "c6a84097-5308-438b-ae5d-35a9158489e1",
     "date": "2024-11-12T09:50:19.138Z",
-    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334"
+    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
+    "comments": [
+      {
+        "username": "MUSTAFA KIR ÇOK HATALI DÜŞÜNÜYORSUN",
+        "content": "BİLİNÇALTI........",
+        "date": "2024-11-27T20:26:09.167Z"
+      }
+    ]
   },
   {
     "title": "Yeni animasyonlar ve bug fixler bir harika !",
@@ -173,7 +146,19 @@
     "userad": "andropanda",
     "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/IMG_20241115_020251_169.jpg?v=1731625384404",
     "id": "9e272c58-2e64-46ea-82ca-e376cd33c6b5",
-    "date": "2024-11-14T23:05:02.715Z"
+    "date": "2024-11-14T23:05:02.715Z",
+    "comments": [
+      {
+        "username": "Spoiler ATMAYIN AQ",
+        "content": "Spoiler içeriyor o yüzden 10 üzerinden -82838328 ama Alperen reis hatrına 10 üzerinden +28483939443939",
+        "date": "2024-11-23T19:20:31.699Z"
+      },
+      {
+        "username": "ameriggasevdalisi06",
+        "content": "SÜPERRRRRR👳‍♂️👳‍♂️😘🌹🌹😘💋😍👏👏💋🤔🤣🐱‍🏍💖😒🤷‍♂️💕😆🐱‍👓😆✨✌🤷‍♂️🤞🤞🤞😊😎🐱‍🏍🐱‍🐉🐱‍💻👍🤟",
+        "date": "2024-11-28T05:29:23.368Z"
+      }
+    ]
   },
   {
     "title": "Beyindeki Çağrışımlar (Vibe) ve Nostalji Hissi Hakkındaki Düşüncelerim",
@@ -181,14 +166,267 @@
     "userad": "Potatox35",
     "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
     "id": "6eec2e68-7b13-4194-922a-9f7498da5f6f",
-    "date": "2024-11-20T19:33:05.618Z"
+    "date": "2024-11-20T19:33:05.618Z",
+    "comments": [
+      {
+        "username": "sdasd",
+        "content": "asd",
+        "date": "2024-11-23T18:10:16.487Z"
+      },
+      {
+        "username": "Ben Bir Kullanıcıyım !!!",
+        "content": "He aq kullanıcıyım ben, neyse bu bir deneme yorumudur aldırış etmeyin ben mustafa zaten belli oluyordur",
+        "date": "2024-11-23T18:10:51.967Z"
+      },
+      {
+        "username": "Zemci",
+        "content": "Jfkxldnfkfldngnkc",
+        "date": "2024-11-28T05:27:00.385Z"
+      },
+      {
+        "username": "Kimin kfmfm",
+        "content": "Nfnfnfmfkvmfnflfmg mcmcö",
+        "date": "2024-11-28T05:27:10.692Z"
+      }
+    ]
   },
   {
-    "title": "Beyindeki Çağrışımlar(Vibelar) ve Nostalji Hissi Hakkındaki Düşüncelerim ",
-    "content": "Şu an bu yazıyı daha önceki yazmış olduğum yazının yanlaşıkla silmem sonucu tekrar yazıyor bulunmaktayım o yüzden hızlı geçebilirim konuları kusura bakmayın moralim aşırı bozuk. \n\nÖncelikle beyinde bir kavrama ait bir veriye ulaştığımızda bunun sonucu beynin yaptığı çağrışımlara günümüz tabiriyle vibe deniyor. Şimdi bu çağrışım mekanizmasını çok da bilimsel olmayan temeller ile açıklamaya çalışayım:\n\nÖncelikle biz bir kavrama, bir olaya duyu organlarımız ile tanık oluyoruz ve eğer beyin de kayda değer bulursa kendisinde saklıyor. Sonra bu kavrama ait bir veri gördüğümüzde beynimiz bu daha önceden tanık olduğumuz duyuları bir kısayol olarak kullanıp çağrışım yaparak ulaşmamıza sağlıyor. Bu durum yakın zamanda tanık olunmuş kavramlar için daha keskin çalışırken daha geçmişte kalan kavramlar için nostalji hissi ile gercekleşiyor. Şimdi aslında anlatmak istediğim çoooook şey vardı ama dediğim gibi hepsi silindi :( O yüzden bu benim bizzat yaşamış olduğum vibelar hakkında misaller verip yazımı maalesef ki kısa geçerek sonlandırmak istiyorum. Mesela örnek vermek gerekirse:\n\n2005-2013 arası olan Diziler, filmler, teknolojik ürünler, oyunlar, reklamlar falan hepsi bir tematik gruba dahil oluyor beynimde. \nBu nostaljik bir örnekti mesela Esma Ablamın dediği gibi harbi şizofrenik gözükmeme sebep olan ve yakın zaman vibelarından örnek vereyim:\n\nParaf TYT Paragraf soru bankasının üst tarafında yer alan renkler, tema bana İçim Ayran Reklamını çağrıştırıyor. Evet inanılır gibi değil ama öyle. Daha herkesin yaşayabileceği bir örnek verirsem de Orijinal yayınları logosonun Köfteci Yusuf logosunu aldırması. Bazı logo ve markaların yazı fonlarını başka yerlerde görünce de bende vibe hissi yapıyor ama misal vermicem zira şu an beynim çok dolu. Mesela renk marka ilişkisi olarak Koyu Mavi bende Metro Seyhat,Nivea, Intel gibi firmaları andırıyor. Aslında bu konu hakkında daha çoooook konuşacak şeyim, verecek misalim var ama şu an kısa kesmem gerekiyor yoksa boku çıkacak beni durdurun. Harbiden şizofrenik olduğumü düşünüyorum bazen öyle fantastik vibe anlarım var ama işte tam da şansıma şu an hiç aklıma gelmiyor.\n\nNeyse yazımı burda sonlandırmak istiyorum, biliyorum yazı kalitesi kötü oldu. Bundan önceki yazdığım yazı çok daha iyi ve uzun olacaktı ama onun silinmesinin ardından şunu yazmam bile bir mucize bence. Neyse hadi kendimize iyi bakın.",
+    "title": "Islak Zeminde Yağmurun Altında Futbol Maçı Yapmak ",
+    "content": "Bok gibi, top gitmiyor aq\nZemin Kaygan\nTop ağırlaşıyor\nSoğuktan el uyuşuyor ve kalecilik yapmak zulüm\nYere düşme riski \nGötü, başı batırma ve çamura batma riski\n\nHe bi de \"Yağmur\" demeyin anısı var...",
     "userad": "Potatox35",
     "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
-    "id": "0bed358d-6ca3-4cf9-b27c-55380084169c",
-    "date": "2024-11-20T19:33:49.613Z"
+    "id": "d6de4773-b887-43a4-b13f-1c67cde08721",
+    "date": "2024-11-21T14:06:42.084Z",
+    "comments": [
+      {
+        "username": "bravo mustafa kır",
+        "content": "bravo",
+        "date": "2024-11-27T20:22:54.176Z"
+      },
+      {
+        "username": "bravo mustafa kır",
+        "content": "bravo",
+        "date": "2024-11-27T20:22:55.289Z"
+      },
+      {
+        "username": "b",
+        "content": "Mustafa Kır seni tebrik ediyorum",
+        "date": "2024-11-27T20:32:25.065Z"
+      }
+    ]
+  },
+  {
+    "title": "Was That All ? Deneme",
+    "content": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0CpIOdYZG7gLggo0i6KNRF?utm_source=generator\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "userad": "Potatox35",
+    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
+    "id": "e5868fdf-3b71-4689-9195-12db3fb7993f",
+    "date": "2024-11-22T17:41:20.326Z"
+  },
+  {
+    "title": "ÇOK MUTLUYUM LAAAN ALLLAAAAAAH AŞIRI MUTLUYUM ŞU AN KAFAYI YİCEMMM",
+    "content": "BİLDİĞİM TÜM NAFİLE NAMAZ FALAN NE VARSA KILICAM UÇUYORUM AQ SEVİNÇTEN AĞLIYORUUUUUM\n\n<div class=\"video-container\">\n        <video controls autoplay loop width=\"100%\">\n            <source src=\"https://steamusercontent-a.akamaihd.net/ugc/6287472040627949/11AE6552729D23E2298FEAD1573DAB71800D9B95/\">\n            Tarayıcınız video etiketini desteklemiyor.\n        </video>",
+    "userad": "Potatox35",
+    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
+    "id": "58e2b0a9-7eb7-44af-801f-e553bca54d3a",
+    "date": "2024-11-23T16:18:52.166Z",
+    "comments": [
+      {
+        "username": "Anonim Birisi :D",
+        "content": "Allah allah kimim acaba ben\nvideo güzelmiş bu arada seviliyorsun <3",
+        "date": "2024-11-23T18:18:19.863Z"
+      },
+      {
+        "username": "*_*",
+        "content": "Allah kabul etsin\n\n",
+        "date": "2024-11-23T19:19:34.077Z"
+      },
+      {
+        "username": "öylesinebiri",
+        "content": "video güzelmis",
+        "date": "2024-11-23T19:22:22.777Z"
+      },
+      {
+        "username": "bravo mustafa kır",
+        "content": "bravo",
+        "date": "2024-11-27T20:20:32.245Z"
+      },
+      {
+        "username": "bravo mustafa kır",
+        "content": "bravo",
+        "date": "2024-11-27T20:21:51.985Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:26:59.771Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:26:59.874Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:00.078Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:00.677Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:00.877Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:00.887Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:02.775Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:02.778Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:02.976Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:02.985Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:06.634Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:06.642Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:06.690Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:06.697Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:06.792Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:14.640Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:14.874Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:14.892Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:20.965Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:21.766Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:21.887Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:23.784Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:23.807Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:28.003Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:35.771Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:35.780Z"
+      },
+      {
+        "username": "bravo",
+        "content": "bravo",
+        "date": "2024-11-27T20:27:35.886Z"
+      }
+    ]
+  },
+  {
+    "title": "IDsi kısa post",
+    "content": "İd daha kısa evet",
+    "userad": "Potatox35",
+    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
+    "id": "551298",
+    "date": "2024-11-23T16:37:26.983Z",
+    "comments": [
+      {
+        "username": "AAB",
+        "content": "🗿",
+        "date": "2024-11-23T18:25:09.981Z"
+      },
+      {
+        "username": "AAB",
+        "content": "Aferim …",
+        "date": "2024-11-23T18:25:24.807Z"
+      }
+    ]
+  },
+  {
+    "title": "Biraz uzun oldu :d",
+    "content": "Bilmiyorum neden ilişkiler bu kadar karmaşık olmak zorunda ya da bana böyle geliyor çünkü insaniyet duyguları dışında başka bir şeyden anlamıyorum ben. İlişki taktikleri, flörtleşme taktikleri,süre,\"Kim çabalayacak ilişki için ?\", \"Kim ilk adımı atacak ?\" ve gibi gibi... Bunlar en basit olanları ki dediğim gibi daha nicesi vardır ama ben çok hakim değilim bu konulara. Canımı sıkan bilmemem de değil. Sadece ilişkiler neden en saf duygularla olmuyor, öz basit temel bir şekilde gerçekleşemiyor.Karşımdaki beni ben olduğum için seviyorsa bana saygı duyuyorsa bana sadakati varsa ben de aynı duyguları beslerim, ben de ilişki için elimden gelen herşeyi yaparım, ben de kendimi tamamen feda etmek kadar olmasa da kendimden birşeyler feda ederim. Elbette benim de diğer insanlar gibi kusurlarım var, hoş olmayan huylarım var, anlaşamadığım noktalar ve insanlar var. Kimse dört dörtlük olamaz zaten ve ilişkide beklentim de bu olmaz, asla.Ha tabi bu kusurlar kasıtlıysa ya da kötü niyettense o ayrı ama dediğimi anladınız siz.Bu ilişkilerdeki klişeler ya da genel yargılarda da işin cinsiyetinin olmasını da çok anlayamıyorum. Yani elbette iki cinsiyetin de kendine ait özellikleri ve durumları var bunları bir tutmaya çalışmıyorum bunun aksini iddia edemem zaten. Ama bazı durumlar da cinsiyete bindirilmemeli yani. Bir erkeğin yaptığı ahmaklığın cezasını diğer ona benzeyen erkekler de çekmemeli. İnsanı insan olduğu için yargılamalıyız, yaptıkları ile yargılamalıyız, olduğu şekliyle yargılamalıyız. Kıza kız olduğu, erkeğe erkek olduğu için değil insan olduğu için saygı duymalıyız, ya da insan gibi muamele etmeliyiz. İnsan olmayan mahluklar maalesef var hayat toz pembe değil evet lakin yine de herkesi aynı kefeye koymak da saçmalık olur. Ben bunları yazarken kendimi bu konu hakkında çok emin de hissetmiyorum yanu tamamen içimden ne geliyorsa ne düşünüyorsam onu yazıyorum. İllaki yanılabilirim insanım ben ama samimi olduğumdan emin olabilirsiniz. Bazı konularda muhafazakar kesime göre \"seküler\" davranıyorum, bazı durumlarda da sekülerlere göre \"muhafazakar\" oluyorum ki ben bu iki kavramı da kullanmayı tercih etmiyorum. İnsan olduğu gibidir bir kefeye konmak zorunda değildir. Elbette insanın kendisine ait çizgileri, duruşu ilkeleri olmalıdır ama onu diğer insanlardan ayıran şeyler de olabilir yani ve bunun için de illaki şucu bucu diye isimlendirilmek zorunda değil.Az önce bahsettiğim konudan önceki konuya geri dönersek benim elimden fiziksel olarak kimseye zarar gelmez, gelemez zaten çubuk kraker gibi birşeyim.He psikolojik olarak garantisi veremem çünkü kendimi asla dik duruşlu birisi olarak göremedim ama bir kötü etki bırakırsam da bunu isteyerek yapmam ve karşı tarafı bu durum yıpratıyorsa gidermeye çalışırım yine olmazsa da artık orda bulunmamaya başlarım. Sorunlu taraf olmak ya da olmamak benim için sorun değil yeter ki ikimiz de yıpranmadan saygı içerisinde ilişkimize son verebiliriz ben buna inanıyorum açıkçası. Yaşım küçük, önümde uzun bir yol var tabi Allah ne kadar ömür verirse ama yine de bazı konularda da az çok fikrim oluşmaya başladı ve bunları ifade etmekten de çok çekinmiyorum. İlerde fikirlerim değişebilir ve kendime gülünç bir gözle de bakabilirim ama tekrar dediğim gibi ben herşeyimle samimiyim. Yazı fazla uzadı :D ama bu içimdekilerij, en azından şimdilik içimdekilerin çok ufak kısmı ama şimdilik bu kadarını yazıya dökmek nasip oldu. Kendinize iyi bakın millet, esenlikle kalın",
+    "userad": "Potatox35",
+    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
+    "id": "988159",
+    "date": "2025-01-07T16:38:36.085Z"
+  },
+  {
+    "title": "Ajazz Aj159Pro Ön İnceleme",
+    "content": "Öncelikle mouseu Temu'dan aldım ve bu yeni fiyat sınırlamalarını ucundan geçtim sanırım çünkü ürün elime gelicek mi emin değildim, gümrükten geçemez kafasındaydım ama şükürler olsun ki 7-8 gün içersinde geldi ki Çin'den gelen bir ürün için hiç fena değil bu süre. Temu'dan ilk alışverişim oldu bahaneyle ve hani ürün garantisi falan bakımından gram beklentim yok ama fiyatı çok uyguna geldiği için mouse ben herşeye okeydim. Şimdi mousea gelicek olursak: Öncelikle mouseun beni ilk şaşırtan kısmı ağırlığı oldu çünkü 56 gram olarak geleceğini zaten biliyordum ama elime alınca inanılmaz hafif geldi. Ne yalan söyleyeyim bu durum ilk başta ürünün çok dandik bir ürünmüş gibi hissetmeme neden oldu çünkü bu kadar hafif mouse kullanmıyordum ben. Almadan önceki okuduğum incelemelerde malzeme kalitesinin fena olmadığını söylüyorlardı ki benim de beklentim çok düşük değil gibiydi ama malzeme kalitesi olarak benim beklentimin altında kaldı ki bu benimle alakalı biraz. Dışardan çok tok bir mouse gibi gözüküyor ki ben beyaz renk aldım ve mouse güzel duruyor orda sıkıntı yok ama özellikle oyuncuların tercihi hafif yapmışlar. Zamanla elime alışacağını düşünüyorum ve rekabetçi oyunlarda bu hafifliğin işime geleceğini umuyorum. Şarj istasyonu falan malzeme olarak iyidi altındaki led RGB ışık daha fazla değiştirebilir olabilirdi yani bu fiyat bandında böyle şarj istasyonu falan bile vermiyorlar normaldr o yüzden çok sorun değil bu durum. Magnetic kısımları güzel oturuyor tek sorun istasyonun masaya yapıştırılması gerekebilir yoksa mouse ile beraber gelebiliyor istasyon çekerken, bu aslında o tutturma kısmının iyi olduğunu gösteriyor bence. Kutu içeriği düz kablo, istasyon ve mousedan ibaret.Ha bir de kılavuz tabi ama açıkçası çok fakir bir kutu içeriğine sahip. Yine de bu fiyattaki f/p bir ürün için bunlar çok sorun değil.Mouse 8k kadar pulling rate destekliyor ki bu fiyata göre çok iyi ama ben 1k 2k ile kullanmayı düşünüyorum çünkü fazlası hem işlemciye ufak da olsa yük bindirebilir hem de şarjı hızlı bitebilir. Açıkçası batarya performansı hakkında bişi diyemicem çünkü henüz uzun süreli kullanamadım. Onun da incelemesi gelir. Sensör olarak zaten çok bir yorum yapma imkanım yok zira bu konulardan çok anlayan birisi değilim.PAW3395 sensörü bünyesinde bulunuyor ve yaptığım ufak araştırmalar sonucu bu sensörün kendi fiyat aralığındaki ya da rakiplerindekiler arasında en iyi sensörlerden biri olduğu söyleniyor ki benim bundan endişem yok. MCU kısmı insanları biraz üzmüş ki bu mouseun içindeki yazılım donanım elemanı gibi düşünebilirsiniz:Nordic gibi daha üst düzey bilinen bir mcu olsaydı daha iyi olurdu demişler ama bu fiyat aralığında bunu da normal karşılıyorum ben.Bu ayrıntıların haricindeki mouse vaadettiği pulling rate değerlerini sunuyor, Razer'ın test aracı ile denedim. Mouse bence güzel fiyatına göre çok iyi özellikle donanım olarak ama malzeme kalitesi, tokluk falan gibi durumlarda daha hassas iseniz daha pahalı veya daha bilindik markalardan almanız sizin için çok daha iyi olur zira bu mouse konfor ve malzemeden çok donanım kısmına odaklanmış bir ürün. Ben şimdilik ilk deneyim olarak memnunum şimdi bunun bir de alışma süreci olcak çünkü bayadır ben ağır ve yavaş bir mouse kullanıyordum. 1 ay kullanım sonucu falan sonrası ikinci bir inceleme daha yazabilirim. Şimdilik kendinize iyi bakın millet, esenlikle kalın.",
+    "userad": "Potatox35",
+    "profileimage": "https://cdn.glitch.global/e9458298-3b7b-429c-82ad-a0170a256821/potatoxpp.png?v=1731489666334",
+    "id": "238284",
+    "date": "2025-01-09T05:10:13.245Z"
   }
 ]
